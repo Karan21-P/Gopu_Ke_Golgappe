@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gopu_Ke_Golgappe | Desi Swad, Full Masti!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --saffron: #ff6b00;
+      --deep-orange: #e84d00;
+      --yellow: #ffc400;
+      --green: #138808;
+      --dark-green: #075b05;
+      --cream: #fff8e7;
+      --red: #d62828;
+      --dark: #241b16;
+      --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ---------- LOADER ---------- */
+
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #ff6b00, #ffc400);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: hideLoader 1s ease 2s forwards;
+    }
+
+    .loader-golgappa {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #f8cf82, #c77928);
+      border: 6px solid #8c4b13;
+      animation: bounce 0.7s infinite alternate;
+      box-shadow: 0 10px 0 rgba(0,0,0,.15);
+    }
+
+    #loader h2 {
+      color: white;
+      margin-top: 20px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0) rotate(-5deg); }
+      to { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    @keyframes hideLoader {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* ---------- NAVBAR ---------- */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 231, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 3px solid var(--yellow);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 25px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #ffe2a1, #c87927);
+      border: 4px solid #924d13;
+      position: relative;
+      animation: logoSpin 5s linear infinite;
+    }
+
+    .logo-icon::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 9px;
+      background: #138808;
+      border-radius: 50%;
+      top: 7px;
+      right: 7px;
+      transform: rotate(-25deg);
+    }
+
+    @keyframes logoSpin {
+      0%, 90%, 100% { transform: rotate(0); }
+      95% { transform: rotate(12deg); }
+    }
+
+    .logo-text {
+      font-weight: 800;
+      color: var(--deep-orange);
+      font-size: 19px;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      color: var(--green);
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+    }
+
+    .nav-links button {
+      border: none;
+      background: transparent;
+      color: var(--dark);
+      font: inherit;
+      font-weight: 600;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: .3s;
+    }
+
+    .nav-links button:hover,
+    .nav-links button.active {
+      background: var(--saffron);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* ---------- DECORATIONS ---------- */
+
+    .rangoli {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 4px dashed rgba(255,196,0,.35);
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+      pointer-events: none;
+    }
+
+    .rangoli::before,
+    .rangoli::after {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border: 4px dotted rgba(19,136,8,.35);
+      border-radius: 50%;
+    }
+
+    .rangoli::after {
+      inset: 60px;
+      border-color: rgba(214,40,40,.35);
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ---------- PAGES ---------- */
+
+    .page {
+      display: none;
+      min-height: 100vh;
+      padding-top: 75px;
+      animation: pageIn .6s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- HOME ---------- */
+
+    .hero {
+      min-height: calc(100vh - 75px);
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(255,196,0,.25), transparent 25%),
+        radial-gradient(circle at 10% 80%, rgba(19,136,8,.14), transparent 25%),
+        linear-gradient(135deg, #fff8e7 0%, #fff1cf 100%);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 25px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .hero h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(65px, 9vw, 125px);
+      line-height: .85;
+      color: var(--deep-orange);
+      text-shadow: 4px 5px 0 #ffc400;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+      text-shadow: 3px 4px 0 #ffc400;
+    }
+
+    .hero p {
+      max-width: 580px;
+      margin: 25px 0;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #59473d;
+    }
+
+    .tagline {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 8px 17px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transform: rotate(-2deg);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      padding: 14px 25px;
+      border-radius: 35px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: var(--saffron);
+      color: white;
+      box-shadow: 0 7px 0 #ad3d00;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 0 #ad3d00;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--green);
+      border: 2px solid var(--green);
+    }
+
+    .btn-secondary:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    /* Golgappa hero illustration */
+
+    .food-stage {
+      position: relative;
+      height: 480px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .plate {
+      width: 390px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(#f9f9f9, #d8d8d8);
+      position: absolute;
+      bottom: 80px;
+      box-shadow: 0 25px 30px rgba(0,0,0,.18);
+      border: 8px solid #eee;
+    }
+
+    .golgappa {
+      position: absolute;
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 25%, #ffe2a2 0 8%, #d99648 45%, #a85e19 100%);
+      border: 5px solid #8b4d16;
+      box-shadow: inset -10px -12px 15px rgba(95,43,5,.25),
+                  0 10px 12px rgba(0,0,0,.18);
+    }
+
+    .golgappa::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      background: #8b4d16;
+      border-radius: 50%;
+      top: 20px;
+      left: 25px;
+      opacity: .5;
+    }
+
+    .g1 { transform: translate(-125px, -35px) rotate(-8deg); animation: float1 3s ease-in-out infinite; }
+    .g2 { transform: translate(0, -75px) rotate(5deg); animation: float2 3.4s ease-in-out infinite; }
+    .g3 { transform: translate(125px, -30px) rotate(8deg); animation: float1 2.8s ease-in-out infinite reverse; }
+    .g4 { transform: translate(-60px, 15px) rotate(2deg); }
+    .g5 { transform: translate(65px, 20px) rotate(-4deg); }
+
+    @keyframes float1 {
+      0%,100% { margin-top: 0; }
+      50% { margin-top: -15px; }
+    }
+
+    @keyframes float2 {
+      0%,100% { margin-top: 0; }
+      50% { margin-top: -20px; }
+    }
+
+    .water-bowl {
+      position: absolute;
+      bottom: 20px;
+      right: 5%;
+      width: 130px;
+      height: 70px;
+      border-radius: 0 0 60px 60px;
+      background: linear-gradient(#087d18, #064e0b);
+      border: 5px solid #053d08;
+      animation: bowlFloat 2s infinite ease-in-out;
+    }
+
+    .water-bowl::after {
+      content: "🌿";
+      position: absolute;
+      font-size: 35px;
+      top: -28px;
+      left: 45px;
+    }
+
+    @keyframes bowlFloat {
+      50% { transform: translateY(-8px) rotate(2deg); }
+    }
+
+    /* floating emojis */
+
+    .float {
+      position: absolute;
+      font-size: 40px;
+      animation: emojiFloat 4s ease-in-out infinite;
+      opacity: .8;
+    }
+
+    .f1 { left: 8%; top: 25%; }
+    .f2 { right: 8%; top: 25%; animation-delay: 1s; }
+    .f3 { left: 45%; top: 10%; animation-delay: 2s; }
+    .f4 { right: 25%; bottom: 8%; animation-delay: .5s; }
+
+    @keyframes emojiFloat {
+      0%,100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-18px) rotate(8deg); }
+    }
+
+    /* ---------- COMMON ---------- */
+
+    .section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-family: "Bebas Neue", sans-serif;
+      color: var(--deep-orange);
+      font-size: 60px;
+      margin-top: 5px;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 10px auto;
+      color: #705f55;
+    }
+
+    /* ---------- FEATURES ---------- */
+
+    .features {
+      background: white;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      padding: 35px 25px;
+      border-radius: 25px;
+      background: var(--cream);
+      text-align: center;
+      transition: .35s;
+      border: 2px solid transparent;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      border-color: var(--yellow);
+      box-shadow: 0 20px 35px rgba(0,0,0,.1);
+    }
+
+    .feature .icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    /* ---------- MENU ---------- */
+
+    .menu-page {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,196,0,.12), transparent 25%),
+        var(--cream);
+    }
+
+    .menu-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 18px;
+      border: 2px solid var(--saffron);
+      background: white;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--deep-orange);
+      transition: .3s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--saffron);
+      color: white;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .food-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(85,50,20,.1);
+      transition: .35s;
+      position: relative;
+    }
+
+    .food-card:hover {
+      transform: translateY(-10px) rotate(.5deg);
+      box-shadow: 0 20px 35px rgba(85,50,20,.18);
+    }
+
+    .food-image {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 95px;
+      background:
+        radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1px),
+        linear-gradient(135deg, #ffe8ad, #ffc75c);
+      background-size: 12px 12px, cover;
+    }
+
+    .food-info {
+      padding: 20px;
+    }
+
+    .food-info h3 {
+      color: var(--deep-orange);
+      font-size: 21px;
+      margin-bottom: 7px;
+    }
+
+    .food-info p {
+      color: #75645a;
+      font-size: 13px;
+      line-height: 1.6;
+      min-height: 42px;
+    }
+
+    .food-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .price {
+      color: var(--green);
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .order-btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 9px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .order-btn:hover {
+      background: var(--saffron);
+      transform: scale(1.05);
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--red);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* ---------- ABOUT ---------- */
+
+    .about-page {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-art {
+      min-height: 450px;
+      background: linear-gradient(135deg, var(--green), #0c6308);
+      border-radius: 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 15px 15px 0 var(--yellow);
+    }
+
+    .about-art::before {
+      content: "नमस्ते";
+      position: absolute;
+      font-family: serif;
+      font-size: 100px;
+      color: rgba(255,255,255,.08);
+      transform: rotate(-15deg);
+    }
+
+    .big-golgappa {
+      font-size: 180px;
+      filter: drop-shadow(0 20px 15px rgba(0,0,0,.3));
+      animation: bigFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes bigFloat {
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    .about-content h2 {
+      font-family: "Bebas Neue", sans-serif;
+      color: var(--deep-orange);
+      font-size: 62px;
+      line-height: .9;
+      margin: 15px 0 25px;
+    }
+
+    .about-content p {
+      line-height: 1.9;
+      color: #66564e;
+      margin-bottom: 18px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: var(--cream);
+      border-left: 5px solid var(--saffron);
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 25px;
+      color: var(--green);
+    }
+
+    .stat span {
+      font-size: 12px;
+    }
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-page {
+      background:
+        linear-gradient(rgba(255,248,231,.94), rgba(255,248,231,.94)),
+        repeating-linear-gradient(
+          45deg,
+          #ffc400 0,
+          #ffc400 10px,
+          transparent 10px,
+          transparent 20px
+        );
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: white;
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      color: var(--deep-orange);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      margin: 25px 0;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      background: #fff1d2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      font-size: 14px;
+      color: #76665e;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 15px;
+      border: 2px solid #eadfcd;
+      border-radius: 12px;
+      font: inherit;
+      outline: none;
+      background: #fffdf8;
+      transition: .3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--saffron);
+      box-shadow: 0 0 0 4px rgba(255,107,0,.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #123d10;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer .footer-logo {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 35px;
+      color: var(--yellow);
+      letter-spacing: 2px;
+    }
+
+    footer p {
+      color: #cce2c9;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .socials a:hover {
+      background: var(--saffron);
+      transform: translateY(-5px);
+    }
+
+    /* ---------- TOAST ---------- */
+
+    #toast {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #173c12;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+      transform: translateX(150%);
+      transition: .4s;
+      z-index: 9998;
+      border-left: 5px solid var(--yellow);
+    }
+
+    #toast.show {
+      transform: translateX(0);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 900px) {
+      .hero-content,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .food-stage {
+        height: 400px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-art {
+        min-height: 350px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        padding: 10px 15px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        border-bottom: 3px solid var(--yellow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links button {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 72px;
+      }
+
+      .food-stage {
+        transform: scale(.75);
+        margin: -30px 0;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 50px;
+      }
+
+      .about-content h2 {
+        font-size: 50px;
+      }
+
+      .plate {
+        width: 330px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-golgappa"></div>
+    <h2>Gopu_Ke_Golgappe</h2>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo" onclick="showPage('home')">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+          Gopu_Ke_Golgappe
+          <span>DESI SWAD • FULL MASTI</span>
+        </div>
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><button class="active" onclick="showPage('home', this)">🏠 Home</button></li>
+        <li><button onclick="showPage('about', this)">❤️ About</button></li>
+        <li><button onclick="showPage('menu', this)">🌶️ Menu</button></li>
+        <li><button onclick="showPage('contact', this)">📞 Contact</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HOME PAGE ================= -->
+
+  <main id="home" class="page active">
+
+    <section class="hero">
+
+      <div class="rangoli" style="left:-80px; top:100px;"></div>
+      <div class="rangoli" style="right:-80px; bottom:30px;"></div>
+
+      <div class="float f1">🌶️</div>
+      <div class="float f2">🥭</div>
+      <div class="float f3">✨</div>
+      <div class="float f4">🌿</div>
+
+      <div class="hero-content">
+
+        <div>
+          <div class="tagline">🔥 EK BAAR KHAOGE, BAAR BAAR AAOGE!</div>
+
+          <h1>
+            GOPU<br>
+            <span>KE</span><br>
+            GOLGAPPE
+          </h1>
+
+          <p>
+            Welcome to the ultimate Indian street-food experience!
+            Crispy golgappe, spicy pani, tangy chutneys and loads of
+            <strong>desi masti</strong> — all served with love.
+          </p>
+
+          <div class="buttons">
+            <button class="btn btn-primary" onclick="showPage('menu')">
+              🌶️ Explore Menu
+            </button>
+
+            <button class="btn btn-secondary" onclick="showPage('contact')">
+              📍 Visit Us
+            </button>
+          </div>
+        </div>
+
+        <div class="food-stage">
+
+          <div class="plate"></div>
+
+          <div class="golgappa g1"></div>
+          <div class="golgappa g2"></div>
+          <div class="golgappa g3"></div>
+          <div class="golgappa g4"></div>
+          <div class="golgappa g5"></div>
+
+          <div class="water-bowl"></div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features">
+
+      <div class="section">
+
+        <div class="section-title">
+          <small>Why Gopu?</small>
+          <h2>Desi Swad Ka Adda</h2>
+          <p>
+            Har plate mein crispy crunch, spicy twist aur dil se banaya
+            hua desi taste.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+
+          <div class="feature">
+            <div class="icon">🥣</div>
+            <h3>Fresh Pani</h3>
+            <p>
+              Minty, spicy aur tangy pani — freshly prepared every day.
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="icon">🔥</div>
+            <h3>Extra Spicy</h3>
+            <p>
+              Spice lovers ke liye special teekha pani available hai!
+            </p>
+          </div>
+
+          <div class="feature">
+            <div class="icon">❤️</div>
+            <h3>Made With Love</h3>
+            <p>
+              Traditional flavours with a modern street-food experience.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= ABOUT PAGE ================= -->
+
+  <main id="about" class="page about-page">
+
+    <section class="section">
+
+      <div class="about-grid">
+
+        <div class="about-art">
+          <div class="big-golgappa">🥣</div>
+        </div>
+
+        <div class="about-content">
+
+          <small style="color:var(--green); font-weight:800; letter-spacing:3px;">
+            HAMARI KAHANI
+          </small>
+
+          <h2>
+            Ek Chhota Sa<br>
+            Golgappa,<br>
+            Bada Sa Pyaar!
+          </h2>
+
+          <p>
+            Gopu_Ke_Golgappe ka idea simple tha — India ke favourite
+            street food ko ek fun, colourful aur unforgettable experience
+            banana.
+          </p>
+
+          <p>
+            Hum crispy puris, fresh ingredients, flavorful chutneys aur
+            perfectly balanced pani ke saath har plate ko special banate
+            hain.
+          </p>
+
+          <p>
+            Yahan sirf golgappe nahi milte — yahan milti hai dosti,
+            masti aur woh desi feeling jo ek bite ke baad smile le aaye.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Fresh Ingredients</span>
+            </div>
+
+            <div class="stat">
+              <strong>5+</strong>
+              <span>Pani Flavours</span>
+            </div>
+
+            <div class="stat">
+              <strong>∞</strong>
+              <span>Desi Masti</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= MENU PAGE ================= -->
+
+  <main id="menu" class="page menu-page">
+
+    <section class="section">
+
+      <div class="section-title">
+        <small>Hamari Dukaan</small>
+        <h2>Golgappa Menu</h2>
+        <p>
+          Choose your flavour, choose your spice level and enjoy!
+        </p>
+      </div>
+
+      <div class="menu-filter">
+
+        <button class="filter-btn active" onclick="filterMenu('all', this)">
+          All
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('classic', this)">
+          Classic
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('special', this)">
+          Special
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('sweet', this)">
+          Sweet
+        </button>
+
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+
+        <div class="food-card" data-category="classic">
+          <span class="badge">POPULAR</span>
+          <div class="food-image">🥣</div>
+          <div class="food-info">
+            <h3>Classic Golgappa</h3>
+            <p>Crispy puri with spicy mint pani and tangy imli.</p>
+            <div class="food-bottom">
+              <span class="price">₹50</span>
+              <button class="order-btn" onclick="orderItem('Classic Golgappa')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="special">
+          <span class="badge">HOT 🔥</span>
+          <div class="food-image">🌶️</div>
+          <div class="food-info">
+            <h3>Teekha Blast</h3>
+            <p>For spice lovers! Extra spicy green pani with masala.</p>
+            <div class="food-bottom">
+              <span class="price">₹60</span>
+              <button class="order-btn" onclick="orderItem('Teekha Blast')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="special">
+          <span class="badge">CHEESY</span>
+          <div class="food-image">🧀</div>
+          <div class="food-info">
+            <h3>Cheese Golgappa</h3>
+            <p>Desi golgappa meets creamy cheese and spicy chutney.</p>
+            <div class="food-bottom">
+              <span class="price">₹80</span>
+              <button class="order-btn" onclick="orderItem('Cheese Golgappa')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="classic">
+          <div class="food-image">🥔</div>
+          <div class="food-info">
+            <h3>Aloo Masala Puri</h3>
+            <p>Classic potato masala with coriander and crunchy puri.</p>
+            <div class="food-bottom">
+              <span class="price">₹45</span>
+              <button class="order-btn" onclick="orderItem('Aloo Masala Puri')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="sweet">
+          <span class="badge">SWEET</span>
+          <div class="food-image">🍯</div>
+          <div class="food-info">
+            <h3>Meetha Pani Puri</h3>
+            <p>Sweet tamarind water with dates, jaggery and masala.</p>
+            <div class="food-bottom">
+              <span class="price">₹55</span>
+              <button class="order-btn" onclick="orderItem('Meetha Pani Puri')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="special">
+          <span class="badge">CHEF PICK</span>
+          <div class="food-image">🥭</div>
+          <div class="food-info">
+            <h3>Raw Mango Pani Puri</h3>
+            <p>Refreshing kacchi kairi pani with a zesty masala twist.</p>
+            <div class="food-bottom">
+              <span class="price">₹65</span>
+              <button class="order-btn" onclick="orderItem('Raw Mango Pani Puri')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="classic">
+          <div class="food-image">🌿</div>
+          <div class="food-info">
+            <h3>Pudina Pani Puri</h3>
+            <p>Super refreshing mint water with our secret masala.</p>
+            <div class="food-bottom">
+              <span class="price">₹50</span>
+              <button class="order-btn" onclick="orderItem('Pudina Pani Puri')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="special">
+          <span class="badge">NEW</span>
+          <div class="food-image">🥭</div>
+          <div class="food-info">
+            <h3>Fusion Golgappa</h3>
+            <p>Our experimental special with exciting new flavours.</p>
+            <div class="food-bottom">
+              <span class="price">₹90</span>
+              <button class="order-btn" onclick="orderItem('Fusion Golgappa')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="sweet">
+          <div class="food-image">🍫</div>
+          <div class="food-info">
+            <h3>Chocolate Puri</h3>
+            <p>A fun sweet ending for people who love chocolate.</p>
+            <div class="food-bottom">
+              <span class="price">₹70</span>
+              <button class="order-btn" onclick="orderItem('Chocolate Puri')">
+                Order
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= CONTACT PAGE ================= -->
+
+  <main id="contact" class="page contact-page">
+
+    <section class="section">
+
+      <div class="section-title">
+        <small>Milte Hain!</small>
+        <h2>Contact Gopu</h2>
+        <p>
+          Golgappe ka mood ho toh message karo. Gopu ready hai! 😋
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+
+          <h3>📍 Visit Our Stall</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Address</strong>
+              <span>123 Desi Street, Food Market, India</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span>+91 98765 43210</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <strong>Opening Hours</strong>
+              <span>Every Day: 4:00 PM – 11:00 PM</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <span>hello@gopukegolgappe.com</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-form">
+
+          <h3>💌 Send Us A Message</h3>
+
+          <form onsubmit="submitForm(event)">
+
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+              <label>What do you want?</label>
+              <select>
+                <option>Golgappa Party</option>
+                <option>Bulk Order</option>
+                <option>Birthday Party</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              📨 Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-logo">Gopu_Ke_Golgappe</div>
+
+    <p>🌶️ Desi Swad • Fresh Pani • Full Masti 🌶️</p>
+
+    <div class="socials">
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="WhatsApp">💬</a>
+    </div>
+
+    <p style="margin-top:20px;">
+      © 2025 Gopu_Ke_Golgappe. Made with ❤️ and lots of Golgappe.
+    </p>
+
+  </footer>
+
+  <!-- TOAST -->
+
+  <div id="toast"></div>
+
+  <script>
+
+    /* ---------- PAGE NAVIGATION ---------- */
+
+    function showPage(pageId, clickedButton = null) {
+
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+
+      const page = document.getElementById(pageId);
+
+      if (page) {
+        page.classList.add("active");
+      }
+
+      document.querySelectorAll(".nav-links button").forEach(button => {
+        button.classList.remove("active");
+      });
+
+      if (clickedButton) {
+        clickedButton.classList.add("active");
+      } else {
+        const matchingButton =
+          [...document.querySelectorAll(".nav-links button")]
+          .find(btn => btn.textContent.toLowerCase().includes(pageId));
+
+        if (matchingButton) {
+          matchingButton.classList.add("active");
+        }
+      }
+
+      document.getElementById("navLinks").classList.remove("open");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    /* ---------- MOBILE MENU ---------- */
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    /* ---------- MENU FILTER ---------- */
+
+    function filterMenu(category, button) {
+
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      document.querySelectorAll(".food-card").forEach(card => {
+
+        if (
+          category === "all" ||
+          card.dataset.category === category
+        ) {
+          card.style.display = "block";
+          card.style.animation = "pageIn .4s ease";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+    }
+
+    /* ---------- ORDER ---------- */
+
+    function orderItem(item) {
+
+      showToast(
+        "🥣 " + item + " added! Gopu is getting it ready 😋"
+      );
+
+    }
+
+    /* ---------- CONTACT FORM ---------- */
+
+    function submitForm(event) {
+
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      showToast(
+        "🙏 Thanks " + name + "! Your message has been received."
+      );
+
+      event.target.reset();
+
+    }
+
+    /* ---------- TOAST ---------- */
+
+    function showToast(message) {
+
+      const toast = document.getElementById("toast");
+
+      toast.textContent = message;
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+
+    }
+
+    /* ---------- RANDOM FLOATING SPICE ---------- */
+
+    const spices = ["🌶️", "✨", "🥭", "🌿", "💛"];
+
+    setInterval(() => {
+
+      const emoji = document.createElement("div");
+
+      emoji.textContent =
+        spices[Math.floor(Math.random() * spices.length)];
+
+      emoji.style.position = "fixed";
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.style.bottom = "-50px";
+      emoji.style.fontSize = "22px";
+      emoji.style.zIndex = "999";
+      emoji.style.pointerEvents = "none";
+      emoji.style.transition = "transform 4s linear, opacity 4s";
+
+      document.body.appendChild(emoji);
+
+      setTimeout(() => {
+        emoji.style.transform =
+          "translateY(-110vh) rotate(360deg)";
+        emoji.style.opacity = "0";
+      }, 100);
+
+      setTimeout(() => {
+        emoji.remove();
+      }, 4200);
+
+    }, 2500);
+
+  </script>
+
+</body>
+</html>
+
